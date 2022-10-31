@@ -5,11 +5,11 @@ from food import Food
 from scoreboard import Scoreboard
 
 
-# CONFIGURACIÓN SNAKE #
+# SNAKE CONFIGURATION #
 snake_0 = snake.Snake() 
 
 
-# CONFIGURACIÓN SCREEN #
+# SCREEN CONFIGURATION #
 screen = Screen()
 screen.setup(height = 600, width = 600)
 screen.bgcolor("black") # BACKGROUND COLOR
@@ -21,10 +21,10 @@ screen.onkey(snake_0.down, "Down")
 screen.onkey(snake_0.left, "Left")
 screen.onkey(snake_0.right, "Right")
 
-# CONFIGURACIÓN COMIDA #
+# FOOD CONFIGURATION #
 food = Food()
 
-# CONFIGURACIÓN CONTADOR #
+# SCOREBOARD CONFIGURATION #
 scoreboard = Scoreboard()
 
 game_on = True
@@ -37,7 +37,7 @@ while game_on:
     snake_0.move()
 
     # DETECT COLLISION WITH FOOD #
-    if snake_0.head.distance(food.position()) < 15: # Distancia de la snake con respecto a la comida
+    if snake_0.head.distance(food.position()) < 15: 
        food.refresh()
        scoreboard.refresh_score()
        snake_0.extend()
@@ -52,10 +52,5 @@ while game_on:
         if snake_0.head.distance(segment) < 10:
             game_on = False
             scoreboard.game_over()
-
-
-        
-
-
 
 screen.exitonclick()
