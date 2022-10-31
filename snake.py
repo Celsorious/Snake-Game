@@ -26,7 +26,6 @@ class Snake:
             self.segments[num_segment].goto(new_position_x, new_position_y)
         self.segments[0].forward(MOVE_DISTANCE)
     def extend(self):
-        """ Add a new segment to the snake"""
         self.add_segment(self.segments[len(self.segments) -1].position())
 
     def up(self):
