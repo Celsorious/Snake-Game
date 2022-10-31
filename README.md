@@ -16,4 +16,3 @@ Necessary packages:
 -Creation of food in random places.
 
 -Increase size when the snake eats food.
-
