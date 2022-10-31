@@ -8,3 +8,9 @@ Necessary packages:
 
 -Python
 
+# Features:
+-Scoreboard.
+-Collision detection with screen borders and snake's head with its body.
+-Creation of food in random places.
+-Increase size when the snake eats food.
+
